@@ -9,3 +9,8 @@ The idea of this part is to spin up a [Pub/Sub topic](https://cloud.google.com/p
 The moment we have the topic ready, we would choose one of all the ways of [publishing messages](https://cloud.google.com/pubsub/docs/publisher#python) to that topic. I generally use the console to publish some dummy data and then set up the [Python Client Library](https://googleapis.dev/python/pubsub/latest/index.html) for a productive PoV.
 
 ## ETL with Dataflow
+Now that we have the topic ready and messages comming, we neet to capture them, maybe do some cleaning to them, and load them to a place we can use them(run queries on it, use the date as source for dashboards, etc.)
+
+We are going to use [Dataflow](https://cloud.google.com/dataflow/docs/concepts), that internally runs the [Apache Beam](https://beam.apache.org/documentation/) programming model.
+
+In a simplified way, what we need to do is to create a [Driver Program](/source/) which later will be deployed to the cloud. More info on the [source folder](/source/).
