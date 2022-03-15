@@ -1,5 +1,6 @@
 # Streaming Project in Google Cloud Platform
 The idea of this project is to use GCP data stack to ingest data in real time, wrangle it and load it to a Data Warehouse. The data products that I will be using are PubSub, Dataflow and BigQuery.
+
 I am going to keep a template style the most I can so this structure is useful for a lot of different projects.
 
 ## Ingestion with Pub/Sub
